@@ -1,0 +1,6 @@
+body{
+  background-image: linear-gradient(0deg, transparent 31px, #cab8d9 32px),linear-gradient(90deg,  transparent 31px, #cab8d9 32px);
+  background-color: #fff;
+  background-size: 32px 32px;
+  background-attachment: fixed;
+} 
