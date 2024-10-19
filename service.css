@@ -1,0 +1,148 @@
+@charset "utf-8";
+ 
+h1 {
+  position: relative;
+  margin: 33px 990px 20px auto;
+  padding: 1rem 6rem;
+  border: 2px solid #000;
+  max-width: 350px;
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro", "Meiryo UI", "Meiryo", "MS PGothic", sans-serif;
+  font-feature-settings: "palt"
+}
+
+h1:before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  content: '';
+  border: 2px solid #000;
+  max-width: 350px;
+}
+
+a:link {
+ color: #808080;
+ text-decoration: underline;
+}
+
+a:visited {
+ color: #696969;
+ text-decoration: underline;
+}
+
+a:hover {}
+
+a:active {
+ color: #000;
+ text-decoration: underline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+html {
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro", "Meiryo UI", "Meiryo", "MS PGothic", sans-serif;
+  font-size: 62.5%;
+  font-feature-settings: "palt"
+}
+
+.menuWrap {
+  width: 100%;
+  max-width: 950px;
+  text-align: center;
+  margin: 100px auto 0
+}
+
+.menuWrap .tabItem {
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  font-size: 1.6rem;
+  letter-spacing: 0.09em;
+  line-height: 50px;
+  text-align: center;
+  background: #c1c1c1;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  cursor: pointer
+}
+
+.menuWrap .tabItem:hover { background: #000 }
+.menuWrap input[name="tabItem"] { display: none }
+.menuWrap .tabContent {
+  width: 100%;
+  max-width: 950px;
+  text-align: left;
+  margin-top: 60px;
+  display: none;
+  overflow: hidden
+}
+
+.menuWrap #one + label,
+.menuWrap #two + label,
+.menuWrap #three + label,
+.menuWrap #four + label,
+.menuWrap #five + label,
+.menuWrap #six + label,
+.menuWrap #seven + label {
+  margin-left: 20px
+}
+
+.menuWrap #one:checked ~ #oneContent,
+.menuWrap #two:checked ~ #twoContent,
+.menuWrap #three:checked ~ #threeContent,
+.menuWrap #four:checked ~ #fourContent,
+.menuWrap #five:checked ~ #fiveContent,
+.menuWrap #six:checked ~ #sixContent,
+.menuWrap #seven:checked ~ #sevenContent {
+  display: block
+}
+
+.menuWrap input:checked + .tabItem { background: #000 }
+.menuWrap .tabContent p {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #c1c1c1
+}
+.menuWrap .tabContent dl {
+  font-size: 0;
+  padding: 20px 10px;
+  border-bottom: 1px dashed #c1c1c1
+}
+.menuWrap .tabContent dt {
+  width: calc(100% - 140px);
+  font-size: 1.6rem;
+  letter-spacing: 0.09em;
+  vertical-align: middle;
+  display: inline-block
+}
+.menuWrap .tabContent dd {
+  width: 140px;
+  font-size: 1.6rem;
+  letter-spacing: 0.09em;
+  vertical-align: middle;
+  text-align: right;
+  display: inline-block
+}
+.menuWrap .tabContent dd span { font-size: 1.3rem }
+@media screen and (max-width: 768px) {
+  .menuWrap { padding: 2rem }
+  .menuWrap .tabItem { width: 0 4% }
+  .menuWrap #one + label,
+  .menuWrap #two + label,
+  .menuWrap #three + label,
+  .menuWrap #four + label,
+  .menuWrap #five + label,
+  .menuWrap #six + label,
+  .menuWrap #seven + label {
+    margin-left: 10px
+  }
+  .menuWrap .tabContent p { font-size: 6rem }
+  .menuWrap .tabContent dl { padding: 20px 0 }
+  .menuWrap .tabContent dd span { font-size: 1.2rem }
+}
